@@ -1,0 +1,62 @@
+* {
+  padding: 0;
+  margin: 0;
+  line-height: 0;
+}
+html {
+  background-color: darkslategray;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  width: 90%;
+  margin: 10px auto;
+  border: 3px solid white;
+  display: flex;
+  flex-wrap: wrap;
+}
+.container-jumbo {
+  width: 70%;
+  display: flex;
+  align-items: center;
+}
+.container .jumbo {
+  width: 100%; /* Membuat gambar mengisi seluruh lebar container */
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.thumbnail {
+  display: flex;
+  flex-wrap: wrap;
+  width: 30%;
+}
+.thumb {
+  width: 200px;
+  border: 1px solid white;
+  box-sizing: border-box;
+  filter: grayscale(100%);
+}
+.thumb:hover {
+  cursor: url("img/zoomIn.png"), auto;
+  filter: grayscale(0%);
+}
+
+.active {
+  filter: grayscale(0%);
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 0;
+  }
+}
+
+.fade {
+  animation: fadeIn 0.5s backwards;
+}
